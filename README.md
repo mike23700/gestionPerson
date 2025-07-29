@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS person (
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/mike23700/personne-management.git
+   git clone https://github.com/mike23700/gestionPerson.git
    ```
 
 2. Import the project into your favorite IDE (e.g., IntelliJ IDEA, Eclipse).
