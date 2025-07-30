@@ -7,7 +7,7 @@
 <body>
     <h2>Gérer les personnes</h2>
     <c:if test="${not empty message}">
-        <p style="color:blue">${message}</p>
+        <p>${message}</p>
     </c:if>
 
     <!-- Formulaire de recherche -->

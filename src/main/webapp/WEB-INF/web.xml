@@ -4,9 +4,4 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
          http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          version="3.0">
-
-<servlet>
-  <servlet-name>PersonneServlet</servlet-name>
-  <servlet-class>com.tp1.servlet.PersonneServlet</servlet-class>
-</servlet>
 </web-app>
