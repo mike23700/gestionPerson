@@ -3,7 +3,6 @@ package com.tp1.servlet;
 import com.tp1.bean.Personne;
 import com.tp1.bean.AccessDB;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
@@ -32,13 +31,11 @@ public class PersonneServlet extends HttpServlet {
         }
 
         request.setAttribute("personne", personne);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/resultat.jsp");
-        dispatcher.forward(request, response);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/resultat.jsp");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/formulaire.jsp");
-        dispatcher.forward(request, response);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/formulaire.jsp");
     }
 }

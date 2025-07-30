@@ -6,7 +6,7 @@
 </head>
 <body>
     <h2>Entrer les informations de la personne</h2>
-    <form method="post" action="${pageContext.request.contextPath}/person">
+    <form method="post" action="/tp1/person">
         <label for="nom">Nom :</label>
         <input type="text" name="nom" id="nom" required ><br><br>
 
