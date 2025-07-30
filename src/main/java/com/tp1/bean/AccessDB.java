@@ -12,11 +12,14 @@ public class AccessDB {
 
             String checkQuery = "SELECT * FROM person WHERE nom = ?";
             try (PreparedStatement checkStmt = conn.prepareStatement(checkQuery)) {
+                Class.forName( "com.mysql.jdbc.Driver" );
                 checkStmt.setString(1, personne.getNom());
                 ResultSet rs = checkStmt.executeQuery();
                 if (rs.next()) {
                     throw new SQLException("Ce nom existe déjà !");
                 }
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
             }
 
             String insertQuery = "INSERT INTO person (nom, prenom) VALUES (?, ?)";
