@@ -7,7 +7,7 @@ public class AccessDB {
     private static final String USER = "root";
     private static final String PASSWORD = "";
 
-    public void enregistrerPersonne(Personne personne) throws SQLException {
+    public void enregistrerPersonne(Personne personne) throws SQLException{
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD)) {
 
             String checkQuery = "SELECT * FROM person WHERE nom = ?";
